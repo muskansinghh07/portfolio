@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Muskan's Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -10,20 +12,22 @@
 <body>
 
 
-  <div class="navbar">
-    <!--<div class="logo">-->
-      <a href="#home" class="logo">Muskan's Portfolio</a>
+<div class="navbar">
+  <a href="#home" class="logo">YourLogo</a>
 
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#project">Projects</a>
-        <a href="#hackathon">Hackathons</a>
-        <a href="#skill">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      
-    </div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#project" onclick="toggleMenu()">Projects</a>
+      <a href="#hackathon" onclick="toggleMenu()">Hackathons</a>
+    <a href="#skill" onclick="toggleMenu()">Skills</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
   </div>
+</div>
+
+
   <section class="home" id="home">
     <div class="home-content">
         <h1><span class ="highlighted_text">Designing </span>
@@ -31,18 +35,21 @@
         <span class ="highlighted_text">Devloping </span>
          systems that perform.</h1>
         <p>I'm
-          <strong>Muskan</strong>
+          <strong> <span class ="highlighted_text">Muskan</span></strong>
             , a passionate Web Developer crafting responsive, user-focused digital experiences — blending backend logic with front-end magic.</p>
     
     <div class ="home-link">
-      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/muskann-singh/"><i class="fa-brands fa-linkedin"></i></a>
+  
+      <a href="https://github.com/muskansinghh07"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/_.muskann.6/"><i class="fa-brands fa-instagram"></i></a>
+    
+  
       </div>
-    <a href="" class="btn">Download Resume <i class="fa-solid fa-download"></i></a>
+    <a href="muskankumari_resume.pdf" class="btn">Download Resume <i class="fa-solid fa-download"></i></a>
     </div>
     <div class="home-image">
-      <img src="" alt="Muskan's Photo">
+      <!--<img src="" alt="Muskan's Photo">-->
     </div>
   </section>
   <section class ="project" id ="project">
@@ -53,39 +60,33 @@
         <span class="highlighted_text">Purposeful Solutions</span>
       </h1>
       <p>
-        As a developer, I turn real-world challenges into working systems.I build solutions that are more than just code — they’re answers to real needs.
+        As a developer, I turn real-world challenges into working systems.I build solutions that are more
+         than just code — they’re answers to real needs.
       </p>
     </div>
     <div class ="project-container">
       <div class ="project-card1">
         <img src="istockphoto-1159741374-612x612.jpg" >
         <h2> <span class="gradient-underline">Aparna 2.4</span></h2>
-        <p> Developed a Python-based personal assistant application designed to help users manage daily tasks and
- enhance productivity. The application schedules tasks, tracks completion status, and generates daily
- productivity reports using intuitive logic and data handling. Focused on streamlining personal workflow
- and time management.</p>
+        <p> Developed a Python-based personal assistant application designed to help users manage daily tasks and enhance productivity. The application schedules tasks, tracks completion status, and generates daily productivity reports using intuitive logic and data handling. Focused on streamlining personal workflow and time management.</p>
       </div>
 
       <div class="project-card2">
         <img src="istockphoto-1159741374-612x612.jpg">
         <h2><span class="gradient-underline">Vitallity vibe</span></h2>
-        <p> A health-focused website that helps users improve fitness by calculating BMI and providing personalized
- diet plans. With a user-friendly interface, it offers tailored recommendations for weight loss, muscle gain, or
- maintaining a balanced diet, promoting healthier lifestyle choices.</p>
+        <p> A health-focused website that helps users improve fitness by calculating BMI and providing personalized diet plans. With a user-friendly interface, it offers tailored recommendations for weight loss, muscle gain, or maintaining a balanced diet, promoting healthier lifestyle choices.</p>
       </div>
 
       <div class="project-card3">  
         <img src="istockphoto-1159741374-612x612.jpg" > 
         <h2><span class="gradient-underline">CRM Site</span></h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos illo amet ea aspernatur, beatae impedit in culpa perspiciatis nulla harum omnis unde, corrupti explicabo, alias blanditiis quidem eveniet laboriosam </p>
+        <p>Developed a role-based CRM web application using PHP, MySQL, HTML, CSS, and JavaScript. Features include user authentication, employee/coordinator/admin dashboards, attendance tracking, task assignment, salary calculation, and real-time login monitoring.</p>
       </div>
 
       <div class = "project-card4">
         <img src="istockphoto-1159741374-612x612.jpg">
         <h2><span class="gradient-underline">Intelligence cam</span></h2>
-        <p> A Python-based tool that enhances image quality using Machine Learning, offering customizable resolution
- settings. It improves clarity and sharpness, using facial recognition to identify individuals. The tool displays
- the original and enhanced images side by side, making it ideal for applications in security and photography.</p>
+        <p> A Python-based tool that enhances image quality using Machine Learning, offering customizable resolutio settings. It improves clarity and sharpness, using facial recognition to identify individuals. The tool displays the original and enhanced images side by side, making it ideal for applications in security and photography.</p>
       </div>
     </div>
     
@@ -120,7 +121,8 @@
               <h3><span class="gradient-underline"><b>Byteverse</b> Annual Hackathon —
               <i> NIT Patna</i></span>
               </h3>
-              <p>Headed a high-performing team at the Annual Hackathon, NIT Patna, delivering a real-time tech solution under intense time constraints</p>
+              <p>Headed a high-performing team at the Annual Hackathon, NIT Patna, delivering a real-time
+                 tech solution under intense time constraints</p>
             </div>
           </div>
           <div class="hackathon-card3">
@@ -131,7 +133,8 @@
               <h3><span class="gradient-underline"><b>Evolumin</b> Hackathon —
                 <i> Finalist</i></span>
               </h3>
-              <p> Finalist among 100+ teams, recognized for delivering impactful solutions and strong technical execution in a competitive hackathon setting.</p>
+              <p> Finalist among 100+ teams, recognized for delivering impactful solutions and strong technical
+                 execution in a competitive hackathon setting.</p>
             </div>
           </div>
           <div class ="hackathon-card4">
@@ -142,7 +145,8 @@
               <h3><span class="gradient-underline"><b>Real Skill — </b>
               IC IIT Patna</span>
             </h3>
-              <p> Assisted with registration, tech support, and logistical arrangements, contributing to the seamless management of the overall event.</p>
+              <p> Assisted with registration, tech support, and logistical arrangements, contributing to the 
+                seamless management of the overall event.</p>
             </div>
         </div>
       </div>
@@ -245,7 +249,8 @@
       </div>
     <div class="contact-item">
       <img src="download.png" alt="phone-icon">
-      <a href="+91-7360807160">+91-7360807160</a>
+      <a href="tel:+917360807160">+91-7360807160</a>
+
     </div>
     </div>
 </section>
@@ -255,30 +260,12 @@
 </footer>
 
 
-    
-  <!--<header>
-    <h1>Hi, I'm Muskan 👋</h1>
-    <p>Aspiring Fullstack Developer</p>
-  </header>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+</script>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a passionate developer who loves to build cool web projects!</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>CRM Website</h3>
-      <p>A PHP-based CRM for car detailing company with real-time tracking.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email me at: <a href="mailto:muskan@example.com">muskan@example.com</a></p>
-  </section>
--->
-  <script src="script.js"></script>
 </body>
 </html>
