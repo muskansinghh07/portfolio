@@ -17,7 +17,7 @@ A clean, responsive personal portfolio website to showcase your work, skills, an
 
 - HTML5
 - CSS3
-
+- js
 
 
 ##  Folder Structure
