@@ -1,271 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Muskan's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muskan Kumari — Web Developer</title>
+<meta name="description" content="Muskan Kumari, Web Developer. Building responsive websites, WordPress builds and full-stack systems.">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <div class="navbar">
-  <a href="#home" class="logo">YourLogo</a>
-
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-
+  <a href="#home" class="logo">MK<span>.</span></a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   <div class="nav-links" id="navLinks">
-    <a href="#home" onclick="toggleMenu()">Home</a>
-    <a href="#project" onclick="toggleMenu()">Projects</a>
-      <a href="#hackathon" onclick="toggleMenu()">Hackathons</a>
-    <a href="#skill" onclick="toggleMenu()">Skills</a>
-    <a href="#contact" onclick="toggleMenu()">Contact</a>
-      <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#home" class="nav-link" data-section="home" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="nav-link" data-section="about" onclick="toggleMenu()">About</a>
+    <a href="#experience" class="nav-link" data-section="experience" onclick="toggleMenu()">Experience</a>
+    <a href="#projects" class="nav-link" data-section="projects" onclick="toggleMenu()">Projects</a>
+    <a href="#work" class="nav-link" data-section="work" onclick="toggleMenu()">Live Work</a>
+    <a href="#skills" class="nav-link" data-section="skills" onclick="toggleMenu()">Skills</a>
+    <a href="#contact" class="nav-link" data-section="contact" onclick="toggleMenu()">Contact</a>
   </div>
 </div>
 
+<!-- HERO -->
+<section class="home" id="home">
+  <div class="home-content">
+    <p class="kicker">Web Developer, based in Noida</p>
+    <h1>I build the systems behind
+      <span class="highlight">interfaces people trust.</span>
+    </h1>
+    <p class="home-sub">Hi, I'm Muskan — I design and ship responsive websites, WordPress builds and full-stack tools, from first line of code to the client walkthrough.</p>
 
-  <section class="home" id="home">
-    <div class="home-content">
-        <h1><span class ="highlighted_text">Designing </span>
-        interfaces that speak,
-        <span class ="highlighted_text">Devloping </span>
-         systems that perform.</h1>
-        <p>I'm
-          <strong> <span class ="highlighted_text">Muskan</span></strong>
-            , a passionate Web Developer crafting responsive, user-focused digital experiences — blending backend logic with front-end magic.</p>
-    
-    <div class ="home-link">
-      <a href="https://www.linkedin.com/in/muskann-singh/"><i class="fa-brands fa-linkedin"></i></a>
-  
-      <a href="https://github.com/muskansinghh07"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.instagram.com/_.muskann.6/"><i class="fa-brands fa-instagram"></i></a>
-    
-  
-      </div>
-    <a href="muskankumari_resume.pdf" class="btn">Download Resume <i class="fa-solid fa-download"></i></a>
+    <div class="home-actions">
+      <a href="Muskann.pdf" class="btn-primary">Download Résumé <i class="fa-solid fa-arrow-down"></i></a>
+      <a href="#projects" class="btn-ghost">See my work</a>
     </div>
-    <div class="home-image">
-      <!--<img src="" alt="Muskan's Photo">-->
+
+    <div class="home-link">
+      <a href="https://www.linkedin.com/in/muskann-singh/" aria-label="LinkedIn" target="_blank" rel="noopener" style="--c:#2fb4e0"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/muskansinghh07" aria-label="GitHub" target="_blank" rel="noopener" style="--c:#c9c9c9"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.instagram.com/_.muskann.6/" aria-label="Instagram" target="_blank" rel="noopener" style="--c:#e0568c"><i class="fa-brands fa-instagram"></i></a>
     </div>
-  </section>
-  <section class ="project" id ="project">
-    <div class ="project-heading" >
-      <h1> Where
-        <span class ="highlighted_text">Passion Projects</span>
-        Become 
-        <span class="highlighted_text">Purposeful Solutions</span>
-      </h1>
-      <p>
-        As a developer, I turn real-world challenges into working systems.I build solutions that are more
-         than just code — they’re answers to real needs.
-      </p>
+  </div>
+
+  <div class="home-card" aria-hidden="true">
+    <div class="home-card-head">
+      <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+      <span class="home-card-title">profile.json</span>
     </div>
-    <div class ="project-container">
-      <div class ="project-card1">
-        <img src="istockphoto-1159741374-612x612.jpg" >
-        <h2> <span class="gradient-underline">Aparna 2.4</span></h2>
-        <p> Developed a Python-based personal assistant application designed to help users manage daily tasks and enhance productivity. The application schedules tasks, tracks completion status, and generates daily productivity reports using intuitive logic and data handling. Focused on streamlining personal workflow and time management.</p>
-      </div>
+    <pre class="home-card-body"><code id="typedCode"></code><span class="type-cursor" id="typeCursor"></span></pre>
+  </div>
+</section>
 
-      <div class="project-card2">
-        <img src="istockphoto-1159741374-612x612.jpg">
-        <h2><span class="gradient-underline">Vitallity vibe</span></h2>
-        <p> A health-focused website that helps users improve fitness by calculating BMI and providing personalized diet plans. With a user-friendly interface, it offers tailored recommendations for weight loss, muscle gain, or maintaining a balanced diet, promoting healthier lifestyle choices.</p>
-      </div>
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-heading">
+    <h2>About<i></i></h2>
+    <p>A closer look at how I got here, and where I'm most useful in a project.</p>
+  </div>
 
-      <div class="project-card3">  
-        <img src="istockphoto-1159741374-612x612.jpg" > 
-        <h2><span class="gradient-underline">CRM Site</span></h2>
-        <p>Developed a role-based CRM web application using PHP, MySQL, HTML, CSS, and JavaScript. Features include user authentication, employee/coordinator/admin dashboards, attendance tracking, task assignment, salary calculation, and real-time login monitoring.</p>
-      </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a Web Developer who likes turning a vague brief into something people can actually click through. Most of my work lives at the intersection of <span class="highlight-inline">custom builds</span> and <span class="highlight-inline">client-ready polish</span> — WordPress sites that need to look sharp, CRMs that need to hold up under daily use, and small tools I build just to solve my own problem first.</p>
+      <p>I've picked up most of what I know outside the classroom: shipping live client sites, racing the clock in hackathons, and debugging things at hours I won't admit to. HTML, CSS, JavaScript, PHP, MySQL and WordPress are where I'm most fluent, but I'm just as comfortable in a client call as I am in a codebase.</p>
 
-      <div class = "project-card4">
-        <img src="istockphoto-1159741374-612x612.jpg">
-        <h2><span class="gradient-underline">Intelligence cam</span></h2>
-        <p> A Python-based tool that enhances image quality using Machine Learning, offering customizable resolutio settings. It improves clarity and sharpness, using facial recognition to identify individuals. The tool displays the original and enhanced images side by side, making it ideal for applications in security and photography.</p>
+      <div class="about-stats">
+        <div><span class="stat-number">10+</span><span class="stat-label">Projects shipped</span></div>
+        <div><span class="stat-number">2+</span><span class="stat-label">Years building</span></div>
+        <div><span class="stat-number">8+</span><span class="stat-label">Hackathons</span></div>
       </div>
     </div>
-    
-  </section>
-    <section class ="hackathon" id = "hackathon">
-      <div class ="hackathon-heading">
-      <h1>Crafted with 
-        <span class ="highlighted_text">Logic</span>
-         Built with 
-         <span class ="highlighted_text">Purpose</span>
-        </h1>
-        <p>From brainstorming with strangers to shipping real solutions, I’ve learned the true power of collaboration, and loved the thrill of leading teams through the chaos to creation.</p>
+
+    <div class="about-panel">
+      <div class="about-panel-head">
+        <span class="about-panel-tag">Where I focus</span>
       </div>
-      <div class="hackathon-container">
-      <div class ="hackathon-card1">
-        <div class = "hackathon-sub1-1">
-          <h3>01</h3>
+      <ul class="focus-list">
+        <li>
+          <span class="focus-icon i-amber"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <div><h4>Responsive builds</h4><p>Pixel-solid across phone, tablet and desktop.</p></div>
+        </li>
+        <li>
+          <span class="focus-icon i-teal"><i class="fa-brands fa-wordpress"></i></span>
+          <div><h4>WordPress & CMS</h4><p>Client-editable sites that don't break on update.</p></div>
+        </li>
+        <li>
+          <span class="focus-icon i-coral"><i class="fa-solid fa-diagram-project"></i></span>
+          <div><h4>CRMs & dashboards</h4><p>Role-based systems people use every single day.</p></div>
+        </li>
+        <li>
+          <span class="focus-icon i-violet"><i class="fa-solid fa-cart-shopping"></i></span>
+          <div><h4>E-commerce</h4><p>Payments, listings and checkout that convert.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="section-heading">
+    <h2>Experience<i></i></h2>
+    <p>Where I've worked, and what I've been trusted to build.</p>
+  </div>
+
+  <div class="exp-list">
+    <article class="exp-card exp-amber">
+      <div class="exp-badge">SM</div>
+      <div class="exp-body">
+        <div class="exp-top">
+          <div>
+            <h3>Web Developer</h3>
+            <span class="exp-company">Spenz Media</span>
           </div>
-          <div class = "hackathon-sub2-2">
-            <h3><span class="gradient-underline"><b>Ethos</b> Hackathon —
-            <i>IIT Guwahati</i></span>
-            </h3>
-            <p>Led a cross-functional team at IIT Guwahati's National Hackathon, developing a real-time solution with a focus on speed, functionality, and innovation.</p>
-          </div>
+          <span class="exp-date">Apr 2026 – Current</span>
         </div>
-
-        <div class ="hackathon-card2">
-          <div class="hackathon-sub1-1">
-            <h3>02</h3>
-            </div>
-            <div class ="hackathon-sub2-2">
-              <h3><span class="gradient-underline"><b>Byteverse</b> Annual Hackathon —
-              <i> NIT Patna</i></span>
-              </h3>
-              <p>Headed a high-performing team at the Annual Hackathon, NIT Patna, delivering a real-time
-                 tech solution under intense time constraints</p>
-            </div>
-          </div>
-          <div class="hackathon-card3">
-            <div class ="hackathon-sub1-1">
-              <h3>03</h3>
-            </div>
-            <div class="hackathon-sub2-2">
-              <h3><span class="gradient-underline"><b>Evolumin</b> Hackathon —
-                <i> Finalist</i></span>
-              </h3>
-              <p> Finalist among 100+ teams, recognized for delivering impactful solutions and strong technical
-                 execution in a competitive hackathon setting.</p>
-            </div>
-          </div>
-          <div class ="hackathon-card4">
-            <div class ="hackathon-sub1-1">
-              <h3>04</h3>
-            </div>
-            <div class ="hackathon-sub2-2">
-              <h3><span class="gradient-underline"><b>Real Skill — </b>
-              IC IIT Patna</span>
-            </h3>
-              <p> Assisted with registration, tech support, and logistical arrangements, contributing to the 
-                seamless management of the overall event.</p>
-            </div>
+        <ul>
+          <li>Develop and customize client websites: design updates, new features and functionality enhancements.</li>
+          <li>Build and maintain portfolio showcase pages replicating previously delivered client projects for the agency's own portfolio.</li>
+        </ul>
+        <div class="tag-row">
+          <span>Client sites</span><span>Feature builds</span><span>Portfolio design</span>
         </div>
       </div>
+    </article>
+
+    <article class="exp-card exp-teal">
+      <div class="exp-badge">NT</div>
+      <div class="exp-body">
+        <div class="exp-top">
+          <div>
+            <h3>WordPress Developer</h3>
+            <span class="exp-company">NSDA Technologies</span>
+          </div>
+          <span class="exp-date">Jan 2026 – Mar 2026</span>
+        </div>
+        <ul>
+          <li>Built and managed 5+ websites, including Mittify.com, while maintaining Mittify.in and Chatorii.com.</li>
+          <li>Integrated UPI payments and Google Search Console, plus assorted website functionality and technical fixes.</li>
+          <li>Handled e-commerce operations — product listings and technical support — across Amazon and Flipkart.</li>
+        </ul>
+        <div class="tag-row">
+          <span>WordPress</span><span>UPI payments</span><span>Amazon & Flipkart</span>
+        </div>
       </div>
-    </section>
+    </article>
 
+    <article class="exp-card exp-coral">
+      <div class="exp-badge">BS</div>
+      <div class="exp-body">
+        <div class="exp-top">
+          <div>
+            <h3>Web Developer Intern</h3>
+            <span class="exp-company">Bullaura Services Pvt. Ltd.</span>
+          </div>
+          <span class="exp-date">May 2025 – Aug 2025</span>
+        </div>
+        <ul>
+          <li>Developed and launched the company's official website end to end.</li>
+          <li>Designed a custom CRM with real-time location tracking and WhatsApp booking automation, streamlining customer bookings and admin communication.</li>
+        </ul>
+        <div class="tag-row">
+          <span>CRM build</span><span>Real-time tracking</span><span>WhatsApp API</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
-<section class="skills" id="skill">
-  <div class="skills-heading">
-    <h1><span class="highlighted_text">Skills</span> that Power My <span class="highlighted_text">Code</span></h1>
-    <p>My skills reflect the journey — built with late-night learning, weekend debugging, and project wins.</p>
+<!-- PROJECTS -->
+<section class="project" id="projects">
+  <div class="section-heading">
+    <h2>Projects<i></i></h2>
+    <p>Real problems I turned into working systems — built on my own time, for my own itch.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="webapp">Web Apps</button>
+    <button class="filter-btn" data-filter="tool">Tools</button>
+    <button class="filter-btn" data-filter="client">Client Work</button>
+  </div>
+
+  <div class="project-container">
+    <div class="project-card" data-category="webapp">
+      <div class="project-icon i-amber"><i class="fa-solid fa-gamepad"></i></div>
+      <h3>Code Duels</h3>
+      <p>A real-time 1v1 competitive coding platform: timed battles, wagered points, and a Practice Mode with difficulty-based problem sets. Duel Mode adds random problem selection, live competition and winner-takes-all scoring, backed by leaderboards to keep people coming back.</p>
+      <div class="tag-row"><span>Real-time</span><span>Auth</span><span>Leaderboards</span></div>
+    </div>
+
+    <div class="project-card" data-category="client">
+      <div class="project-icon i-teal"><i class="fa-solid fa-users-gear"></i></div>
+      <h3>CRM Site</h3>
+      <p>A role-based CRM web app with secure authentication and separate dashboards for employees, coordinators and admins. Handles attendance tracking, task assignment, salary calculation, real-time login monitoring, and media uploads for reporting.</p>
+      <div class="tag-row"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+    </div>
+
+    <div class="project-card" data-category="tool">
+      <div class="project-icon i-coral"><i class="fa-solid fa-book-open"></i></div>
+      <h3>Smart Dictionary</h3>
+      <p>A responsive dictionary web app with word search, meanings, pronunciation audio and a Word of the Day. Dark/light theme toggle, localStorage-backed favourites and recent searches, and a glassmorphism UI on top of a public dictionary API.</p>
+      <div class="tag-row"><span>API integration</span><span>UI/UX</span><span>localStorage</span></div>
+    </div>
+
+    <div class="project-card" data-category="tool">
+      <div class="project-icon i-violet"><i class="fa-solid fa-list-check"></i></div>
+      <h3>Aparna 2.4</h3>
+      <p>A Python-based personal assistant that schedules tasks, tracks completion status and generates daily productivity reports — built to streamline my own workflow and time management.</p>
+      <div class="tag-row"><span>Python</span><span>Automation</span></div>
+    </div>
+
+    <div class="project-card" data-category="webapp">
+      <div class="project-icon i-amber"><i class="fa-solid fa-heart-pulse"></i></div>
+      <h3>Vitality Vibe</h3>
+      <p>A health-focused website that calculates BMI and generates personalized diet plans — tailored recommendations for weight loss, muscle gain or maintaining a balanced diet, wrapped in a friendly interface.</p>
+      <div class="tag-row"><span>Web app</span><span>UX</span></div>
+    </div>
+
+    <div class="project-card" data-category="tool">
+      <div class="project-icon i-teal"><i class="fa-solid fa-camera-retro"></i></div>
+      <h3>Intelligence Cam</h3>
+      <p>A Python tool that enhances image quality with ML and customizable resolution settings, using facial recognition to identify individuals. Shows original and enhanced images side by side — built for security and photography use cases.</p>
+      <div class="tag-row"><span>Python</span><span>ML</span><span>Facial recognition</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE WEBSITES -->
+<section class="work" id="work">
+  <div class="section-heading">
+    <h2>Live work<i></i></h2>
+    <p>Client sites that are out there and running today.</p>
+  </div>
+
+  <div class="work-list">
+    <a class="work-item" href="https://mittify.com" target="_blank" rel="noopener">
+      <div class="work-item-top">
+        <h3>Mittify</h3>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </div>
+      <p class="work-domain">mittify.com — E-commerce</p>
+      <p>A WooCommerce store with a full payment gateway, product management, country-based pricing/currency switching, and cart & checkout. I manage the responsive UI, listings and ongoing enhancements.</p>
+      <div class="tag-row"><span>WooCommerce</span><span>Payment gateway</span><span>Multi-currency</span></div>
+    </a>
+
+    <a class="work-item" href="https://buildinspectmelbourne.com.au" target="_blank" rel="noopener">
+      <div class="work-item-top">
+        <h3>BuildInspect</h3>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </div>
+      <p class="work-domain">buildinspectmelbourne.com.au — Business</p>
+      <p>A professional, service-focused WordPress site structured for clear navigation, mobile responsiveness and better customer conversion.</p>
+      <div class="tag-row"><span>WordPress</span><span>Responsive UI</span><span>Service pages</span></div>
+    </a>
+
+    <a class="work-item" href="https://webfoliospace.com/libertyfarms" target="_blank" rel="noopener">
+      <div class="work-item-top">
+        <h3>Libertyfarm</h3>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </div>
+      <p class="work-domain">webfoliospace.com/libertyfarms — Hospitality</p>
+      <p>A responsive farm-stay site covering accommodation, dining, farm activities, a gallery and booking — with content and contact flows built for customer inquiries.</p>
+      <div class="tag-row"><span>Booking flow</span><span>Gallery</span><span>Content sections</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- HACKATHONS -->
+<section class="hackathon" id="hackathon">
+  <div class="section-heading">
+    <h2>Hackathons<i></i></h2>
+    <p>From brainstorming with strangers to shipping real solutions — where I learned what teams under pressure actually need.</p>
+  </div>
+
+  <div class="hackathon-grid">
+    <div class="hackathon-item ha-amber">
+      <span class="hackathon-num">01</span>
+      <h3>Ethos Hackathon <span class="dash">—</span> IIT Guwahati</h3>
+      <p>Led a cross-functional team at IIT Guwahati's national hackathon, developing a real-time solution with a focus on speed, functionality and innovation.</p>
+    </div>
+    <div class="hackathon-item ha-teal">
+      <span class="hackathon-num">02</span>
+      <h3>Byteverse Annual <span class="dash">—</span> NIT Patna</h3>
+      <p>Headed a high-performing team, delivering a real-time tech solution under intense time constraints.</p>
+    </div>
+    <div class="hackathon-item ha-coral">
+      <span class="hackathon-num">03</span>
+      <h3>Evolumin Hackathon <span class="dash">—</span> Finalist</h3>
+      <p>Finalist among 100+ teams, recognized for delivering impactful solutions and strong technical execution.</p>
+    </div>
+    <div class="hackathon-item ha-violet">
+      <span class="hackathon-num">04</span>
+      <h3>Real Skill <span class="dash">—</span> IC IIT Patna</h3>
+      <p>Assisted with registration, tech support and logistics, contributing to the seamless running of the event.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <p>I like the version of building where the deadline is real and the team is mostly strangers — it's where I learned to ship fast without cutting corners that matter.</p>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-heading">
+    <h2>Skills<i></i></h2>
+    <p>Built up through late-night learning, weekend debugging and project wins.</p>
   </div>
 
   <div class="skills-container">
-
     <div class="skill-card">
-          <h3 class="skill-title">
-        <span class="icon-circle"><i class="fas fa-code"></i></span>
-        Programming & Web Development
-        </h3>
-        <div class="skills-list">
-        <span>C</span>
-        <span>C++</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
-        <span>SQL</span>
-      </div>
+      <h3 class="skill-title"><span class="icon-circle i-amber"><i class="fa-solid fa-code"></i></span>Languages</h3>
+      <div class="skills-list"><span data-level="3">Java</span><span data-level="3">C</span><span data-level="3">C++</span></div>
     </div>
-
     <div class="skill-card">
-      <h3 class="skill-title">
-        <span class="icon-circle"><i class="fas fa-paint-brush"></i></span>
-        CRM & Design Tools
-        </h3>
-      <div class="skills-list">
-        <span>WordPress</span>
-        <span>Canva</span>
-      </div>
-      </div>
-    
-
+      <h3 class="skill-title"><span class="icon-circle i-teal"><i class="fa-solid fa-display"></i></span>Frontend</h3>
+      <div class="skills-list"><span data-level="5">HTML5</span><span data-level="5">CSS</span><span data-level="5">JavaScript</span><span data-level="4">Bootstrap</span><span data-level="3">Tailwind</span></div>
+    </div>
     <div class="skill-card">
-<h3 class="skill-title">
-  <span class="icon-circle"><i class="fas fa-file-alt"></i></span>
-  Office & Productivity
-</h3>
-    <div class="skills-list">
-        <span>Microsoft Word</span>
-        <span>Microsoft Excel</span>
-        <span>PowerPoint</span>
-      </div>
+      <h3 class="skill-title"><span class="icon-circle i-coral"><i class="fa-solid fa-server"></i></span>Backend & Data</h3>
+      <div class="skills-list"><span data-level="5">PHP</span><span data-level="3">Python</span><span data-level="4">SQL</span><span data-level="4">JSON</span></div>
     </div>
-
     <div class="skill-card">
-      <h3 class="skill-title">
-        <span class="icon-circle"><i class="fas fa-user"></i></span>
-        Soft Skills
-        </h3>
-      <div class="skills-list">
-        <span>Teamwork</span>
-        <span>Problem Solving</span>
-        <span>Leadership</span>
-        <span>Interpersonal Skills</span>
-      </div>
+      <h3 class="skill-title"><span class="icon-circle i-violet"><i class="fa-solid fa-swatchbook"></i></span>Design</h3>
+      <div class="skills-list"><span data-level="3">Figma</span><span data-level="4">Canva</span><span data-level="3">Photoshop</span><span data-level="4">UI/UX</span></div>
     </div>
-
-  </div>
-</section>
-<hr>
-<section class="about-section" id="about">
-  <div class="about-container">
-    <div class="about-left">
-      <h1><span class="highlighted_text">About</span><br><span class="highlighted_text">Me</span></h1>
+    <div class="skill-card">
+      <h3 class="skill-title"><span class="icon-circle i-amber"><i class="fa-solid fa-code-branch"></i></span>Version Control & Deploy</h3>
+      <div class="skills-list"><span data-level="4">Git</span><span data-level="4">GitHub</span><span data-level="3">Vercel</span></div>
     </div>
-    <div class="about-right">
-      <p>I’m <span class="highlighted_text">Muskan Kumari</span>, a bachelor student of Computer Science passionate about full-stack development and creative design. I love turning ideas into functional, visually engaging websites and apps.
-      With hands-on experience in <span class="highlighted_text">HTML</span>, <span class="highlighted_text">CSS</span>, <span class="highlighted_text">JavaScript</span>, <span class="highlighted_text">PHP </span>, <span class="highlighted_text">MySQL</span>, <span class="highlighted_text">and WordPress</span>, I build solutions that are both user-friendly and purpose-driven.</p> 
-     <p>I’ve contributed to <span class="highlighted_text">hackathons</span>, worked on live projects, and love collaborating in fast-paced tech environments.</p>
-
-      <div class="about-stats">
-        <div><span class="stat-number">10+</span><br>Projects</div>
-        <div><span class="stat-number">2+</span><br>Years of Experience</div>
-        <div><span class="stat-number">8+</span><br>Hackathons</div>
-      </div>
+    <div class="skill-card">
+      <h3 class="skill-title"><span class="icon-circle i-teal"><i class="fa-solid fa-cart-shopping"></i></span>CMS & E-commerce</h3>
+      <div class="skills-list"><span data-level="5">WordPress</span><span data-level="3">Shopify</span><span data-level="3">Amazon Seller Central</span><span data-level="3">Flipkart Seller Hub</span></div>
     </div>
   </div>
 </section>
-<hr style="margin-left:auto; margin-right: 0;">
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+  <div class="section-heading">
+    <h2>Education<i></i></h2>
+    <p>The formal side of the story.</p>
+  </div>
+
+  <div class="education-card">
+    <div class="education-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+    <div class="education-main">
+      <h3>Bachelor of Computer Applications</h3>
+      <p>Aryabhatta Knowledge University</p>
+      <div class="education-bar"><span></span></div>
+    </div>
+    <span class="education-date">2023 <i class="fa-solid fa-arrow-right"></i> 26</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact-section" id="contact">
-    <div class="contact-left">
-      <h1><span class="highlighted_text">Let's Connect</span></h1>
-    <p>Have a project in mind or just want to talk? I'd love to hear from you!</p>
-    </div>
-  <div class="contact-details">
-  <div class="contact-item">
-    <img src="download (1).jpeg" alt="email-icon" width="24" height="24">
-    <a href="mailto:muskan1singh81@gmail.com">muskan1singh81@gmail.com</a>
+  <div class="section-heading">
+    <h2>Let's connect<i></i></h2>
+    <p>Have a project in mind, or just want to talk shop? I'd love to hear from you.</p>
   </div>
-</div> <br>
-    <div class="contact-item">
-      <img src="download.png" alt="phone-icon">
-      <a href="tel:+917360807160">+91-7360807160</a>
 
-    </div>
-    </div>
+  <div class="contact-grid">
+    <a class="contact-item" href="mailto:muskan1singh81@gmail.com">
+      <span class="contact-icon i-amber"><i class="fa-solid fa-envelope"></i></span>
+      <div><h4>Email</h4><p>muskan1singh81@gmail.com</p></div>
+    </a>
+    <a class="contact-item" href="tel:+917360807160">
+      <span class="contact-icon i-teal"><i class="fa-solid fa-phone"></i></span>
+      <div><h4>Phone</h4><p>+91 7360807160</p></div>
+    </a>
+    <a class="contact-item" href="https://www.linkedin.com/in/muskann-singh/" target="_blank" rel="noopener">
+      <span class="contact-icon i-coral"><i class="fa-brands fa-linkedin-in"></i></span>
+      <div><h4>LinkedIn</h4><p>linkedin.com/in/muskann-singh</p></div>
+    </a>
+    <a class="contact-item" href="https://github.com/muskansinghh07" target="_blank" rel="noopener">
+      <span class="contact-icon i-violet"><i class="fa-brands fa-github"></i></span>
+      <div><h4>GitHub</h4><p>github.com/muskansinghh07</p></div>
+    </a>
+  </div>
 </section>
-<hr style="width:100%">
-<footer>
-  <p>@ All rights reserved</p>
-</footer>
 
+<footer>
+  <p>© Muskan Kumari — built line by line.</p>
+</footer>
 
 <script>
   function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
+    document.getElementById("navLinks").classList.toggle("show");
+    document.getElementById("hamburger").classList.toggle("open");
   }
+
+  /* 1. Hero code-card typing effect */
+  const codeLines = [
+    ['"name"', '"Muskan Kumari"'],
+    ['"role"', '"Web Developer"'],
+    ['"based_in"', '"Noida, U.P"'],
+    ['"currently_at"', '"Spenz Media"'],
+    ['"stack"', '["PHP", "JS", "WordPress", "SQL"]'],
+    ['"focus"', '"responsive builds, CRMs, e-commerce"'],
+    ['"hackathons"', '8+']
+  ];
+  const typedEl = document.getElementById('typedCode');
+  const cursorEl = document.getElementById('typeCursor');
+  let li = 0, ci = 0;
+  function typeNext() {
+    if (li >= codeLines.length) { cursorEl.style.display = 'inline-block'; return; }
+    const [key, val] = codeLines[li];
+    const full = key + ': ' + val + (li < codeLines.length - 1 ? ',' : '');
+    if (ci <= full.length) {
+      const partial = full.slice(0, ci);
+      const rendered = partial
+        .replace(key, '<span class="tok-key">' + key + '</span>')
+        .replace(val, '<span class="tok-str">' + val + '</span>');
+      typedEl.innerHTML = typedEl.innerHTML.split('\n').slice(0, li).concat(ci >= key.length ? rendered : partial).join('\n');
+      ci++;
+      setTimeout(typeNext, 14);
+    } else {
+      typedEl.innerHTML += '\n';
+      li++; ci = 0;
+      setTimeout(typeNext, 60);
+    }
+  }
+  if (typedEl) setTimeout(typeNext, 400);
+
+  /* 2. Project filter */
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(card => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+      });
+    });
+  });
+
+  /* 3. Skill proficiency dots */
+  document.querySelectorAll('.skills-list span[data-level]').forEach(span => {
+    const level = parseInt(span.dataset.level, 10) || 0;
+    const label = span.textContent;
+    let dots = '';
+    for (let i = 0; i < 5; i++) dots += i < level ? '●' : '○';
+    span.innerHTML = label + '<span class="level-dots">' + dots + '</span>';
+  });
+
+  /* 4. Scroll progress + active nav */
+  const progressBar = document.getElementById('scrollProgress');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = Array.from(navLinks).map(l => document.getElementById(l.dataset.section)).filter(Boolean);
+
+  function onScroll() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+
+    let current = sections[0];
+    sections.forEach(sec => {
+      if (scrollTop >= sec.offsetTop - 140) current = sec;
+    });
+    navLinks.forEach(l => l.classList.toggle('active', current && l.dataset.section === current.id));
+  }
+  document.addEventListener('scroll', onScroll);
+  onScroll();
 </script>
 
 </body>
